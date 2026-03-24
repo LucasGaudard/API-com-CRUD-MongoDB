@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const VendaMensalSchema = new mongoose.Schema({
-  mes: Number,
+  mes: String,
   valorVendido: Number,
 });
 
