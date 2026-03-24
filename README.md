@@ -1,115 +1,61 @@
 # 📊 API de Vendas Mensais
 
-API REST para gerenciamento de vendas mensais, com operações completas de CRUD, utilizando Node.js, Express e MongoDB.
+Projeto Fullstack para gerenciamento de vendas mensais, com autenticação de usuários utilizando JWT, CRUD completo e integração entre frontend e backend.
 
----
 
 ## 🚀 Tecnologias utilizadas
 
-* Node.js
-* Express
-* MongoDB
-* Mongoose
+### 🔧 Backend
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- JWT (Json Web Token)
+- Bcrypt
+
+### 🎨 Frontend
+- React (Vite)
+- Axios
+- CSS
 
 ---
 
 ## 📌 Funcionalidades
 
-* Criar uma venda
-* Listar todas as vendas
-* Atualizar uma venda
-* Deletar uma venda
+### 🔐 Autenticação
+✔️ Cadastro de usuário  
+✔️ Login com geração de token JWT  
+✔️ Proteção de rotas  
+
+### 📊 Vendas
+✔️ Criar uma venda  
+✔️ Listar todas as vendas  
+✔️ Atualizar uma venda  
+✔️ Deletar uma venda  
 
 ---
 
 ## 📡 Rotas da API
 
-| Método | Rota        | Descrição              |
-| ------ | ----------- | ---------------------- |
-| POST   | /vendas     | Criar uma nova venda   |
-| GET    | /vendas     | Listar todas as vendas |
-| PUT    | /vendas/:id | Atualizar uma venda    |
-| DELETE | /vendas/:id | Deletar uma venda      |
+### 🔐 Auth
+| Método | Rota       | Descrição            |
+|--------|------------|---------------------|
+| POST   | /register  | Criar usuário       |
+| POST   | /login     | Login e gerar token |
+
+### 📊 Vendas (Protegidas 🔒)
+| Método | Rota           | Descrição              |
+|--------|----------------|------------------------|
+| POST   | /vendas        | Criar venda            |
+| GET    | /vendas        | Listar vendas          |
+| PUT    | /vendas/:id    | Atualizar venda        |
+| DELETE | /vendas/:id    | Deletar venda          |
 
 ---
 
-## ⚙️ Como rodar o projeto
+## 🔐 Autenticação JWT
 
-### 1. Clonar o repositório
+As rotas de vendas são protegidas.
 
-```bash
-git clone https://github.com/seu-usuario/api-mongodb-grafico.git
-```
+É necessário enviar o token no header:
 
-### 2. Entrar na pasta
-
-```bash
-cd api-mongodb-grafico
-```
-
-### 3. Instalar dependências
-
-```bash
-npm install
-```
-
-### 4. Criar arquivo `.env`
-
-Crie um arquivo `.env` na raiz do projeto e adicione:
-
-```env
-MONGO_URI=sua_string_do_mongodb
-PORT=3000
-```
-
-### 5. Rodar o servidor
-
-```bash
-npm run dev
-```
-
----
-
-## 🧪 Testando a API
-
-Você pode testar usando:
-
-* Postman
-* Insomnia
-* Thunder Client (VS Code)
-
----
-
-## 📁 Estrutura do projeto
-
-```
-📦 API_MongoDB_Grafico
- ┣ 📜 server.js
- ┣ 📜 VendaMensal.js
- ┣ 📜 package.json
- ┣ 📜 .env
- ┗ 📜 .gitignore
-```
-
----
-
-## 🔐 Observações
-
-* O arquivo `.env` não está incluído no repositório por motivos de segurança
-* Certifique-se de configurar corretamente sua string de conexão do MongoDB
-
----
-
-## 💼 Autor
-
-Desenvolvido por Lucas Gaudard
-📧 [Lucasgaudard07@gmail.com](mailto:Lucasgaudard07@gmail.com)
-
----
-
-## 📌 Status do projeto
-
-✅ Finalizado (versão inicial)
-🚀 Em evolução (melhorias futuras)
-
----
